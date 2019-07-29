@@ -36,8 +36,6 @@ class NewsController extends Controller {
         }
         $arNew_records = $News->getRecords(['idate'=>['>'=>'0'],'id'=>$iId],[],0,1);
         if(empty($arNew_records['0']['id'])){
-            echo 'sesd';
-            die();
             return $this->redirect("/view/0");
         }
         return $this->render('view',['new'=>$arNew_records['0']]);
