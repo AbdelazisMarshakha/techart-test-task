@@ -31,15 +31,9 @@ class Router
 
     public function run()
     {
-        if(DEBUG){
-            ini_set('error_reporting', E_ALL);
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-        }else{
-            ini_set('error_reporting', 0);
-            ini_set('display_errors', 0);
-            ini_set('display_startup_errors', 0);
-        }
+        ini_set('error_reporting', 0);
+        ini_set('display_errors', 0);
+        ini_set('display_startup_errors', 0);
         set_error_handler(function($errno, $errstr, $errfile, $errline, array $errcontext) {   
             if (0 === error_reporting()) {
                 return false;
@@ -50,7 +44,7 @@ class Router
         register_shutdown_function(function () {
             $err = error_get_last();
             if (! is_null($err)) {
-                Debug::Dprint($err);
+                App::action500($err);
             }
         });
 

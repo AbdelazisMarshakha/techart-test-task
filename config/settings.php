@@ -10,7 +10,7 @@ return [
         [
             'host'=>'localhost',
             'username'=>'techart_test_taska',
-            'password'=>'321test',
+            'password'=>'',
             'database'=>'techart_test_taska',
         ]
 ];

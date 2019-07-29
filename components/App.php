@@ -36,6 +36,9 @@ class App  extends AppSettings implements AppInterface {
     {
         return call_user_func_array(array(self::instance(), $method), $args);
     }
-
+    public function action500($error){
+        $SiteController = new SiteController();
+        return $SiteController->action500($error);
+    }
 }
 

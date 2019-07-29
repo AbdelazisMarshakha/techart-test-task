@@ -22,7 +22,7 @@ class SiteController extends Controller
         return parent::render('404',[],'Не найдено');
     }
     
-    public function action500(ErrorException $ErrorExcepton = null)
+    public function action500( $ErrorExcepton = null)
     {
         return parent::render('500',['error'=>$ErrorExcepton],'Внутренняя ошибка');
     }
