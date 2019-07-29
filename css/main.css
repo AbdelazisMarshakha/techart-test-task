@@ -1,0 +1,15 @@
+html,body{
+    background-color: lightgrey;
+    margin: 0;
+}
+html{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+body{
+    width: 100%;
+    min-height: 90%;
+}
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+}

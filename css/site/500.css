@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700);
+
+.darkOverlay {
+  background: #333;
+  max-width: 100%;
+  height: 100vh;
+  opacity: .45;
+  z-index: 2;
+}
+
+.over404 {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  margin: auto;
+  height: 100vh;
+  
+}
+
+.over404 header {
+  padding: 0;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.over404 header h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  color: #fff;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 567px) {
+  .over404 header h1 {
+     font-size: 15rem;
+  }
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    clip: rect(424px, 450px, 516px, 0);
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px solid blue;
+    clip: rect(424px, 450px, 526px, 0);
+}
